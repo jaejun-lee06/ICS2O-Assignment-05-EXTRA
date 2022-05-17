@@ -8,34 +8,34 @@ class Program
 {
     public static void Main(string[] args)
     {
-      double userInteger = 0;
-      double pi = 0;
-      double number = 1;
-      var positiveOrNegative = "minus";
+        double userInteger = 0;
+        double pi = 0;
+        double number = 1;
+        var positiveOrNegative = "minus";
 
-      Console.Write("Enter a positive number: ");
-      userInteger = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Enter a positive number: ");
+        userInteger = Convert.ToInt32(Console.ReadLine());
 
-      pi = 4.00 / number;
-      while (userInteger > 1.00)
-      {
-        if (positiveOrNegative == "minus")
+        pi = 4.00 / number;
+        while (userInteger > 1.00)
         {
-          number = number + 2.00;
-          pi = pi - (4.00 / number);
-          positiveOrNegative = "plus";
+            if (positiveOrNegative == "minus")
+        {
+            number = number + 2.00;
+            pi = pi - (4.00 / number);
+            positiveOrNegative = "plus";
         }
         else if (positiveOrNegative == "plus")
         {
-          number = number + 2.00;
-          pi = pi + (4.00 / number);
-          positiveOrNegative = "minus";
+            number = number + 2.00;
+            pi = pi + (4.00 / number);
+            positiveOrNegative = "minus";
         }
         userInteger = userInteger - 1;
-      }
-      positiveOrNegative = "minus";
-      number = 1;
-      Console.WriteLine("The answer is:. " + pi.ToString("0.00000"));
-      Console.Write("Done.");
+        }
+        positiveOrNegative = "minus";
+        number = 1;
+        Console.WriteLine("Your answer is: " + pi.ToString("0.00"));
+        Console.Write("Done.");
     }
 }
